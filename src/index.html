@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>APIs for file tasks at FileAPI.net</title>
+
+        <style>
+            html {
+                font-family: sans-serif;
+            }
+            em {
+                padding: 2px;
+                border: 1px solid #ababab;
+                display: inline-block;
+                font-style: normal;
+                background-color: #ffb;
+            }
+            table {
+                border-spacing: 0;
+                border-collapse: collapse;
+            }
+            th {
+                background-color: #eef;
+            }
+            td, th {
+                border: 1px solid #ababab;
+                padding: 15px;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            Stuck on shared hosting and unable to install certain packages?
+            Want to speed-up development of your application?
+            Use this API to perform common file operations.
+        </p>
+
+        <h1>APIs</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>API</th>
+                    <th>Description</th>
+                    <th>Cost</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><em>Image</em></td>
+                    <td>/convert-image-to-other-formats</td>
+                    <td>Convert any image file to 9 other formats.</td>
+                    <td>$0.02 per call</td>
+                    <td><a href="{{ api_base }}/v1/convert-image-to-other-formats?source={{ api_base }}/fixtures/brain.jpg">Example</a></td>
+                </tr>
+
+                <tr>
+                    <td><em>Image</em></td>
+                    <td>/reduce-image-file-size?targetMaxSizeInBytes=[integer]</td>
+                    <td>Reduce an image's file size to be under a certain number of bytes.</td>
+                    <td>$0.02 per call</td>
+                    <td><a href="{{ api_base }}/v1/reduce-image-file-size?targetMaxSizeInBytes=2500&amp;source={{ api_base }}/fixtures/brain.jpg">Example</a></td>
+                </tr>
+
+                <tr>
+                    <td><em>Image</em></td>
+                    <td>/resize-image?targetWidth=[integer]&amp;targetHeight=[integer]</td>
+                    <td>Resize an image.</td>
+                    <td>$0.02 per call</td>
+                    <td><a href="{{ api_base }}/v1/resize-image?targetWidth=100&amp;targetHeight=50&amp;source={{ api_base }}/fixtures/brain.jpg">Example</a></td>
+                </tr>
+
+                <tr>
+                    <td><em>Video</em> <em>Image</em></td>
+                    <td>/convert-gif-to-videos</td>
+                    <td>Convert a GIF to WebM, MP4 and AVI videos.</td>
+                    <td>$0.05 per call</td>
+                    <td><a href="{{ api_base }}/v1/convert-gif-to-videos?source={{ api_base }}/fixtures/rotating-earth.gif">Example</a></td>
+                </tr>
+
+                <tr>
+                    <td><em>Video</em></td>
+                    <td>/convert-video-to-other-formats</td>
+                    <td>Convert any video file to 4 formats: MP4, AVI, WebM, FLV.</td>
+                    <td>$0.50 per call</td>
+                    <td><a href="{{ api_base }}/v1/convert-video-to-other-formats?source={{ api_base }}/fixtures/video.avi">Example</a></td>
+                </tr>
+
+                <tr>
+                    <td><em>Font</em></td>
+                    <td>/convert-ttf-font-to-web-fonts</td>
+                    <td>Convert a TTF font file to EOT, WOFF, SVG and OTF formats.</td>
+                    <td>$0.05 per call</td>
+                    <td><a href="{{ api_base }}/v1/convert-ttf-font-to-web-fonts?source={{ api_base }}/fixtures/font.ttf">Example</a></td>
+                </tr>
+
+                <tr>
+                    <td><em>Any</em></td>
+                    <td>/virus-scan</td>
+                    <td>Scan a file for viruses.</td>
+                    <td>$0.02 per call</td>
+                    <td><a href="{{ api_base }}/v1/virus-scan?source={{ api_base }}/fixtures/font.ttf">Example</a></td>
+                </tr>
+
+                <tr>
+                    <td><em>Image</em></td>
+                    <td>/screenshot?url=[string]</td>
+                    <td>Screenshot a URL and return a PNG image.</td>
+                    <td>$0.10 per call</td>
+                    <td><a href="{{ api_base }}/v1/screenshot?url=https://bing.com/">Example</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>The base URL for all API actions is <tt>{{ api_base }}/v1/</tt></p>
+
+        <p>
+            When you purchase credit, you will be emailed within 24 hours with an API key that you must add to the API URLs.
+            <br />
+            For example, <tt>{{ api_base }}/v1/virus-scan?key=XXXXXXXX</tt>
+        </p>
+
+        <h1>Purchase Credit</h1>
+
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="82H76QTD7MV4Q">
+            <table>
+            <tr><td><input type="hidden" name="on0" value="Amount">Amount</td></tr><tr><td><select name="os0">
+                <option value="$50 Credit">$50 Credit $50.00 USD</option>
+                <option value="$100 Credit">$100 Credit $100.00 USD</option>
+                <option value="$150 Credit">$150 Credit $150.00 USD</option>
+            </select> </td></tr>
+            </table>
+            <br />
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+        <p>Credit will be added to your account within 24 hours. You will be emailed at the email address you use to pay with when your account is ready.</p>
+
+        <h1>Open Source</h1>
+
+        <p>If you are a cheap ass, the source code behind this API is all <a href="https://github.com/fileapinet">open source</a>.</p>
+    </body>
+</html>
