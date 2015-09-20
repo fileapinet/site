@@ -31,8 +31,9 @@
     <body>
         <p>
             Stuck on shared hosting and unable to install certain packages?
-            Want to speed-up development of your application?
-            Use this API to perform common file operations.
+            Want to speed up development of your application?
+            Use this API to perform common file operations like transcoding, virus scanning and
+            taking screenshots.
         </p>
 
         <h1>APIs</h1>
@@ -84,7 +85,7 @@
                     <td><em>Video</em></td>
                     <td>/convert-video-to-other-formats</td>
                     <td>Convert any video file to 4 formats: MP4, AVI, WebM, FLV.</td>
-                    <td>$0.50 per call</td>
+                    <td>$0.50 per 20 MB transcoded</td>
                     <td><a href="{{ api_base }}/v1/convert-video-to-other-formats?source={{ api_base }}/fixtures/video.avi">Example</a></td>
                 </tr>
 
@@ -106,7 +107,7 @@
 
                 <tr>
                     <td><em>Image</em></td>
-                    <td>/screenshot?url=[string]</td>
+                    <td>/screenshot?url=[website.com/page]</td>
                     <td>Screenshot a URL and return a PNG image.</td>
                     <td>$0.10 per call</td>
                     <td><a href="{{ api_base }}/v1/screenshot?url=https://bing.com/">Example</a></td>
@@ -142,8 +143,20 @@
 
         <p>Credit will be added to your account within 24 hours. You will be emailed at the email address you use to pay with when your account is ready.</p>
 
+        <h1>Terms</h1>
+
+        <p>When you make a request to an API, the response contains URLs to the output files. These URLs may expire after 24 hours. The hosted files are there for you to copy the files to your own servers or CDN, only.</p>
+
+        <p>The company behind this is Mega Things Ltd., registered company number 8009734 in England and Wales.</p>
+
+        <h1>Support</h1>
+
+        <p>For support, email <a href="mailto:&#097;&#109;&#121;&#064;&#097;&#109;&#121;&#098;&#111;&#121;&#100;&#046;&#099;&#111;&#046;&#117;&#107;">&#097;&#109;&#121;&#064;&#097;&#109;&#121;&#098;&#111;&#121;&#100;&#046;&#099;&#111;&#046;&#117;&#107;</a></p>
+
+        <p>If there is an API you would like to see added here, send me an email with your requirements and I'll have a think about it.</p>
+
         <h1>Open Source</h1>
 
-        <p>If you are a cheap ass, the source code behind this API is all <a href="https://github.com/fileapinet">open source</a>.</p>
+        <p>The source code behind this API is all <a href="https://github.com/fileapinet">open source</a>, so feel free to host this yourself, or review the code if you are security concious (I am not the NSA, promise).</p>
     </body>
 </html>
