@@ -112,6 +112,14 @@
                     <td>$0.10 per call</td>
                     <td><a href="{{ api_base }}/v1/screenshot?url=https://bing.com/">Example</a></td>
                 </tr>
+
+                <tr>
+                    <td><em>Image</em></td>
+                    <td>/watermark-image?watermark=[website.com/watermark.jpg]&corner=[southeast]</td>
+                    <td>Overlay an image with a watermark image. Only JPG and PNG images are supported.</td>
+                    <td>$0.02 per call</td>
+                    <td><a href="{{ api_base }}/v1/watermark-image?source={{ api_base }}/fixtures/burgers.jpg&watermark={{ api_base }}/fixtures/brain.jpg&corner=southeast">Example</a></td>
+                </tr>
             </tbody>
         </table>
 
