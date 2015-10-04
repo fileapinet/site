@@ -32,6 +32,7 @@ function createNunjucksEnvironment(apiParameters) {
     nunjucksEnv.addGlobal('base_host', apiParameters.base_host);
     nunjucksEnv.addGlobal('protocol', apiParameters.protocol);
     nunjucksEnv.addGlobal('api_base', apiParameters.protocol + 'api.' + apiParameters.base_host);
+    nunjucksEnv.addGlobal('demo_api_base', apiParameters.protocol + 'demo-api.' + apiParameters.base_host);
 
     return nunjucksEnv;
 }
